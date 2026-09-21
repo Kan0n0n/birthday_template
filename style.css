@@ -94,14 +94,22 @@ h1, h2, h3, h4, p {
 
 #gif-5 {
     height: 200px;
+    position: relative;
 }
 
-#gif-5:hover {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0sFaUwxM-hhnT8vhwkHIIEiLQNtw08LZFoE_yAqCEQy4DAv5aP5vgh8o&s=10");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+#gif-5 video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     background-color: white;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#gif-5:hover video {
+    opacity: 1;
 }
 
 #footer {
